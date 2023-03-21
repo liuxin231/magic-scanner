@@ -42,7 +42,9 @@ impl Scanner {
         while let Some(msg) = rx.recv().await {
             let transport_layer_protocol = msg.transport_layer_protocol().unwrap();
             match transport_layer_protocol {
-                TransportLayerProtocol::TCP => tracing::info!("{} [TCP|*]", msg.ip_addr().unwrap()),
+                TransportLayerProtocol::TCP => {
+                    tracing::info!("{}:{} [TCP|*]", msg.ip_addr().unwrap(), msg.port().unwrap())
+                }
                 TransportLayerProtocol::UDP => {}
             }
         }
