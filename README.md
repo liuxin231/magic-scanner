@@ -18,7 +18,7 @@ Options:
 
 running scan
 ```shell
-./magic-scnner -a 127.0.0.1 -p 1-10,21,30-40
+./magic-scnner -a 127.0.0.1 -p 1-10,21,30-40,55743
 ```
 ```shell
 2023-03-24T09:36:29.439988Z  INFO magic_scanner:  __  __          _____ _____ _____  _____  _____          _   _ _   _ ______ _____  
