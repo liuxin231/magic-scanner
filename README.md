@@ -18,7 +18,7 @@ Options:
 
 running scan
 ```shell
-./magic-scnner -a 127.0.0.1 -p 1-10,21,30-40,55743
+./magic-scnner -a 127.0.0.1 -p 1-10,21,30-40,3306
 ```
 ```shell
 2023-03-24T09:36:29.439988Z  INFO magic_scanner:  __  __          _____ _____ _____  _____  _____          _   _ _   _ ______ _____  
@@ -29,7 +29,8 @@ running scan
 2023-03-24T09:36:29.453484Z  INFO magic_scanner: |_|  |_/_/    \_\_____|_____\_____|_____/ \_____/_/    \_\_| \_|_| \_|______|_|  \_\
 2023-03-24T09:36:29.472005Z  INFO magic_scanner: address: {127.0.0.1}
 2023-03-24T09:36:29.472134Z  INFO magic_scanner: ports size: 23
-2023-03-24T09:36:29.481592Z  INFO magic_scanner::scanner: 127.0.0.1:55743 [TCP|*]
+2023-03-26T15:12:29.303811Z  INFO magic_scanner::scanner: 127.0.0.1:3306 [TCP|mysql|5.7.9]
+2023-03-26T15:12:29.304707Z  INFO magic_scanner::scanner: 127.0.0.1:21 [TCP|ftp|*]
 2023-03-24T09:36:29.481638Z  INFO magic_scanner::scanner: run scan socket finished.
 2023-03-24T09:36:29.481664Z  INFO magic_scanner: running end.
 ```
