@@ -72,8 +72,10 @@ impl Socket {
 #[derive(Debug)]
 pub struct ScannerReply {
     activity: bool,
+    name: String,
     ip_addr: Option<IpAddr>,
     port: Option<u16>,
+    version: Option<String>,
     transport_layer_protocol: Option<TransportLayerProtocol>,
 }
 
@@ -81,8 +83,10 @@ impl ScannerReply {
     pub fn new() -> ScannerReply {
         ScannerReply {
             activity: false,
+            name: "*".to_string(),
             ip_addr: None,
             port: None,
+            version: None,
             transport_layer_protocol: None,
         }
     }
@@ -91,6 +95,18 @@ impl ScannerReply {
     }
     pub fn set_activity(&mut self, activity: bool) {
         self.activity = activity;
+    }
+    pub fn name(&self) -> String {
+        self.name.to_string()
+    }
+    pub fn set_name(&mut self, name: String) {
+        self.name = name;
+    }
+    pub fn version(&self) -> Option<String> {
+        self.version.clone()
+    }
+    pub fn set_version(&mut self, version: String) {
+        self.version = Some(version);
     }
     pub fn ip_addr(&self) -> Option<IpAddr> {
         self.ip_addr

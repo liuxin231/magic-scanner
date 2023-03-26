@@ -7,6 +7,7 @@ use std::io;
 use tracing_subscriber::{fmt, layer::SubscriberExt, EnvFilter};
 
 mod args;
+mod fingerprint;
 mod scanner;
 mod utils;
 
