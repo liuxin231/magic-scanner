@@ -1,0 +1,27 @@
+[
+  {
+    "protocol": "TCP",
+    "probes": [
+      {
+        "probe_name": "GetRequest",
+        "probe_string": "",
+        "matches": [
+          {
+            "pattern": "^220 Welcome to the FTP Server[\r\n]+$",
+            "name": "ftp",
+            "discontinue": true
+          },{
+            "pattern": "^I[\\s\\S]{4}(?P<version>([1-9]\\d|[1-9])(.([1-9]\\d|\\d)){2})[\\s\\S]*mysql_native_password[\\s\\S]*$",
+            "name": "mysql",
+            "discontinue": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+  "protocol": "UDP",
+  "probes": [
+  ]
+}
+]
